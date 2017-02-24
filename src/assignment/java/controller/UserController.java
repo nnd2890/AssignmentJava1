@@ -42,13 +42,13 @@ public class UserController {
         user.setName(name);
         UserModel.update(user);
     }
-//    
-//     public static void processDelete() {
-//        System.out.println("Thực hiện delete sinh viên.");
-//        System.out.println("Nhập id.");
-//        int id = ScannerUtil.getInt();
-//        User user = new User();
-//        user.setId(id);
-//        UserModel.delete(user);
-//    }
+    
+     public static void processDelete() {
+        System.out.println("Thực hiện delete sinh viên.");
+        System.out.println("Nhập id.");
+        int id = ScannerUtil.getInt();
+        User user = new User();
+        user.setId(id);
+        UserModel.delete(user);
+    }
 }

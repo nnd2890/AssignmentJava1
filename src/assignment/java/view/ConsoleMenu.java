@@ -18,11 +18,6 @@ public class ConsoleMenu {
         printMenu();
     }
 
-    static void printBeauty() {
-        System.out.printf("%-30s %f\n", "Hello", 10.2);
-        System.out.printf("%-30s %f\n", "Hello World World", 10.2);
-    }
-
     static void printMenu() {
         while (true) {
             // Local variable
@@ -54,7 +49,7 @@ public class ConsoleMenu {
                     UserController.processUpdate();
                     break;
                 case 4:
-                    //UserController.processDelete();
+                    UserController.processDelete();
                     break;
                 case 5:
                     System.out.println("Tìm kiếm sinh viên.");

@@ -93,10 +93,25 @@ public class UserModel {
             }
             
         } catch (SQLException e) {
-            System.err.println("Lỗi khi showList.");
+            System.err.println("Lỗi khi delete.");
+        }
+    }     
+   
+    public static void select(User user){
+        try {
+           Statement statement = DAO.getConnection().createStatement();
+           String query = "select * from sv "
+                   + "where name='" + user.getName()+ "'";
+           ResultSet rs = statement.executeQuery(query);
+           System.out.println("|  ID  |  Name  |");
+           while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                System.out.format("|  %s  |  %s  |\n", id, name);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Lỗi khi select.");
         }
     }
-
-   
-
 }

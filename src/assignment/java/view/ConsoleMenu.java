@@ -52,7 +52,7 @@ public class ConsoleMenu {
                     UserController.processDelete();
                     break;
                 case 5:
-                    System.out.println("Tìm kiếm sinh viên.");
+                    UserController.processSelect();
                     break;
                 case 6:
                     System.out.println("Thoát chương trình.");

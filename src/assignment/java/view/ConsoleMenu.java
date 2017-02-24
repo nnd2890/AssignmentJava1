@@ -48,7 +48,7 @@ public class ConsoleMenu {
                     UserController.processList();
                     break;
                 case 2:
-                    //UserController.processInsert();
+                    UserController.processInsert();
                     break;
                 case 3:
                     //UserController.processUpdate();

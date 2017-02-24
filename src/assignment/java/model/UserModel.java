@@ -21,10 +21,11 @@ public class UserModel {
             Statement statement = DAO.getConnection().createStatement();
             String query = "SELECT * FROM sv";
             ResultSet rs = statement.executeQuery(query);
+            System.out.println("|  ID  |  Name  |");
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                System.out.format("%s, %s\n", id, name);
+                System.out.format("|  %s  |  %s  |\n", id, name);
             }
             
         } catch (SQLException e) {
@@ -32,14 +33,24 @@ public class UserModel {
         }
     }
 
-//    public static void insert(User user) {
-//        try {
-//            Statement statement = DAO.getConnection().createStatement();
-//            statement.execute("Insert into sv values('" + user.getId() + "', '" + user.getName() + "')");
-//        } catch (SQLException e) {
-//            System.err.println("Lỗi khi insert.");
-//        }
-//    }
+    public static void insert(User user) {
+        try {
+            Statement statement = DAO.getConnection().createStatement();
+            String query = "Insert into sv values('" + user.getId() + "', '" + user.getName() + "')";
+            statement.execute(query);
+            statement.executeUpdate(query);
+            query = "SELECT * FROM sv";
+            ResultSet rs = statement.executeQuery(query);
+            System.out.println("|  ID  |  Name  |");
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                System.out.format("|  %s  |  %s  |\n", id, name);
+            }
+        } catch (SQLException e) {
+            System.err.println("Lỗi khi insert.");
+        }
+    }
 
    
 
@@ -86,5 +97,6 @@ public class UserModel {
 //        }
 //    }
 
+   
 
 }

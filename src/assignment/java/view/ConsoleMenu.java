@@ -5,16 +5,12 @@
  */
 package assignment.java.view;
 
-//import assignment.java.controller.UserController;
-
-import com.sun.java_cup.internal.runtime.Scanner;
-
-//import assignment.java.utility.ScannerUtil;
-//import java.util.Scanner;
+import assignment.java.controller.UserController;
+import assignment.java.utility.ScannerUtil;
 
 /**
  *
- * @author daolinh
+ * @author nnd2890
  */
 public class ConsoleMenu {
 
@@ -30,7 +26,7 @@ public class ConsoleMenu {
     static void printMenu() {
         while (true) {
             // Local variable
-            int choice = 0;
+            int choice ;
             // Display menu graphics
             System.out.println("==============================");
             System.out.println("| Phần mềm quản lý sinh viên |");
@@ -44,12 +40,12 @@ public class ConsoleMenu {
             System.out.println("|        6. Exit             |");
             System.out.println("==============================");
             System.out.print("Nhập lựa chọn của bạn: ");
-            //choice = ScannerUtil.getInt()
+            choice = ScannerUtil.getInt();
 
             // Switch construct
             switch (choice) {
                 case 1:
-                    //UserController.processList();
+                    UserController.processList();
                     break;
                 case 2:
                     //UserController.processInsert();

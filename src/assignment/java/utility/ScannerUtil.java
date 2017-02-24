@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author daolinh
+ * @author nnd2890
  */
 public class ScannerUtil {
 

@@ -30,18 +30,18 @@ public class UserController {
         user.setName(name);
         UserModel.insert(user);
     }
-//     
-//    public static void processUpdate() {
-//        System.out.println("Thực hiện update sinh viên.");
-//        System.out.println("Nhập id.");
-//        int id = ScannerUtil.getInt();
-//        System.out.println("Nhập name.");
-//        String name = ScannerUtil.getString();
-//        User user = new User();
-//        user.setId(id);
-//        user.setName(name);
-//        UserModel.update(user);
-//    }
+     
+    public static void processUpdate() {
+        System.out.println("Thực hiện update sinh viên.");
+        System.out.println("Nhập id.");
+        int id = ScannerUtil.getInt();
+        System.out.println("Nhập name.");
+        String name = ScannerUtil.getString();
+        User user = new User();
+        user.setId(id);
+        user.setName(name);
+        UserModel.update(user);
+    }
 //    
 //     public static void processDelete() {
 //        System.out.println("Thực hiện delete sinh viên.");

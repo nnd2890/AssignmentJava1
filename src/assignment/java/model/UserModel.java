@@ -39,14 +39,6 @@ public class UserModel {
             Statement statement = DAO.getConnection().createStatement();
             String query = "Insert into sv values('" + user.getId() + "', '" + user.getName() + "')";
             statement.execute(query);
-//            query = "SELECT * FROM sv";
-//            ResultSet rs = statement.executeQuery(query);
-//            System.out.println("|  ID  |  Name  |");
-//            while (rs.next()) {
-//                int id = rs.getInt("id");
-//                String name = rs.getString("name");
-//                System.out.format("|  %s  |  %s  |\n", id, name);
-//            }
         } catch (SQLException e) {
             System.err.println("Lỗi khi insert.");
         }

@@ -6,6 +6,7 @@
 package assignment.java.view;
 
 import assignment.java.controller.UserController;
+import assignment.java.entity.User;
 import assignment.java.utility.ScannerUtil;
 
 /**
